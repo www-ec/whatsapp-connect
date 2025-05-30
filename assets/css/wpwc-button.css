@@ -1,0 +1,111 @@
+/* Container for button and selector */
+.wpwc-whatsapp-container {
+    position: fixed;
+    z-index: 1000;
+}
+
+/* WhatsApp button (icon only) */
+.wpwc-whatsapp-button,
+.wpwc-whatsapp-button.wpwc-direct-link {
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajustar la imagen dentro del botón */
+.wpwc-whatsapp-button img,
+.wpwc-whatsapp-button.wpwc-direct-link img {
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.wpwc-whatsapp-button img:hover,
+.wpwc-whatsapp-button.wpwc-direct-link img:hover {
+    transform: scale(1.1);
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Department selector */
+.wpwc-agent-selector {
+    display: none;
+    position: absolute;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-left: 4px solid #25D366;
+}
+
+/* Selector header */
+.wpwc-selector-header {
+    margin-bottom: 15px;
+}
+
+.wpwc-selector-header h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.wpwc-selector-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Department list */
+.wpwc-department-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wpwc-department-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.wpwc-department-list li:hover {
+    background-color: #e0f7e9;
+}
+
+.wpwc-department-list li span {
+    font-size: 15px;
+    color: #333;
+}
+
+.wpwc-department-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wpwc-agent-selector {
+        width: 250px;
+    }
+}
